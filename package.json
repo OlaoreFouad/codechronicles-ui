@@ -1,0 +1,15 @@
+{
+  "name": "codechronicles",
+  "version": "1.0.0",
+  "description": "The UI of my tech blog: CodeChronicles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass sass/main.scss styles/styles.css --watch"
+  },
+  "author": "Olaore Fouad",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

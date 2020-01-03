@@ -1,0 +1,27 @@
+.section-posts {
+
+    padding: 3% 4%;
+
+    .posts {
+
+        .post {
+
+            border-radius: 6px;
+            overflow: hidden;
+
+            &#first {
+                width: 800px;
+                height: 380px;
+
+                .post-image {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                }
+            }
+    
+        }
+
+    }
+
+}

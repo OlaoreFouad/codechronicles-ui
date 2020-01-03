@@ -1,0 +1,40 @@
+
+/* Font Faces */
+@font-face {
+    src: url('../fonts/PT_Mono/PTMono-Regular.ttf');
+    font-family: PTMono;
+}
+
+@font-face {
+    src: url('../fonts/Raleway/Raleway-Regular.ttf');
+    font-family: Raleway;
+}
+
+@font-face {
+    src: url('../fonts/Montserrat/Montserrat-Bold.ttf');
+    font-family: MontserratBold;
+}
+
+@font-face {
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+    font-family: Montserrat;
+}
+
+/* Font Classes */
+.ptmono {
+    font-family: 'PTMono', cursive;
+}
+
+.montserrat-bold {
+    font-family: 'MontserratBold', cursive;
+}
+
+.montserrat {
+    font-family: 'Montserrat', cursive;
+}
+
+.raleway {
+    font-family: 'Raleway', cursive;
+}
+
+
