@@ -2,24 +2,80 @@
 
     padding: 3% 4%;
 
+    .pager {
+        text-align: center;
+        margin: 3.5rem 0;
+
+        .content {
+            display: flex;
+            justify-content: center;
+
+            .marker {
+                font-family: 'Raleway';
+                font-size: 1.1rem;
+                color: black;
+                font-weight: 700;
+                margin: auto 10px;
+
+            }
+
+            .page-action {
+
+                background-color: #fff;
+                box-shadow: .1rem .1rem .1rem lighten($color: #ccc, $amount: 10%);
+                border-radius: 50%;
+                padding: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+                width: 35px;
+                backface-visibility: hidden;
+                transition: all .3s;
+
+                &:hover {
+                    box-shadow: .1rem .1rem .5rem lighten($color: #ccc, $amount: 10%);
+                }
+
+                img {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+
+        }
+    }
+
     .posts {
+
+        display: grid;
+        grid-template: 1fr / repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin: 1.3rem 0;
 
         .post {
             border-radius: 6px;
             border: 1px solid lighten($color: #ccc, $amount: 15%);
-            width: 350px;
+            // width: 350px;
             box-shadow: 0 1rem 1.2rem lighten($color: #ccc, $amount: 10%);
             transition: all .3s;
 
+            kbd {
+                color: black;
+                background-color: lighten($color: #ccc, $amount: 15%);
+                padding: .2rem .4rem;
+                border-radius: 5px;
+            }
+
             &:hover {
                 transform: translateY(-5px);
-                box-shadow: 0 1rem 1.2rem lighten($color: #ccc, $amount: 5%);
+                box-shadow: 1.2rem 2rem 2.2rem lighten($color: #ccc, $amount: 5%);
+                cursor: pointer;
             }
 
             .post-image {
                 height: 200px;
                 padding: 20px;
-                overflow: hidden;
                 border-radius: 6px 6px 0 0;
 
                 .post-author {

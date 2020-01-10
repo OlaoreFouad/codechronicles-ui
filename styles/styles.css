@@ -100,55 +100,93 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-posts {
   padding: 3% 4%; }
-  .section-posts .posts .post {
-    border-radius: 6px;
-    border: 1px solid #f2f2f2;
-    width: 350px;
-    box-shadow: 0 1rem 1.2rem #e6e6e6;
-    transition: all .3s; }
-    .section-posts .posts .post:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 1rem 1.2rem #d9d9d9; }
-    .section-posts .posts .post .post-image {
-      height: 200px;
-      padding: 20px;
-      overflow: hidden;
-      border-radius: 6px 6px 0 0; }
-      .section-posts .posts .post .post-image .post-author {
-        background-color: #fff;
-        width: 40px;
-        height: 40px; }
-        .section-posts .posts .post .post-image .post-author .image {
-          width: 35px;
-          height: 35px;
-          border: 3px solid white;
-          border-radius: 50%; }
-          .section-posts .posts .post .post-image .post-author .image img {
-            height: 100%;
-            width: 100%;
-            border-radius: 50%; }
-    .section-posts .posts .post #content {
+  .section-posts .pager {
+    text-align: center;
+    margin: 3.5rem 0; }
+    .section-posts .pager .content {
       display: flex;
-      flex-direction: column;
-      padding: 1.9rem 1rem;
-      height: 100px;
-      position: relative; }
-      .section-posts .posts .post #content > * {
-        margin: 3.5px 0; }
-      .section-posts .posts .post #content .post-category {
-        font-family: 'PTMono';
-        font-weight: 600;
-        font-size: .9rem;
-        color: #606060; }
-      .section-posts .posts .post #content .post-title {
-        font-family: 'Montserrat';
+      justify-content: center; }
+      .section-posts .pager .content .marker {
+        font-family: 'Raleway';
+        font-size: 1.1rem;
         color: black;
         font-weight: 700;
-        font-size: 1.1rem; }
-      .section-posts .posts .post #content .post-timestamp {
-        font-size: .65rem;
-        font-family: 'Montserrat';
-        margin-top: auto;
-        font-weight: 550;
-        position: absolute;
-        bottom: 10px; }
+        margin: auto 10px; }
+      .section-posts .pager .content .page-action {
+        background-color: #fff;
+        box-shadow: 0.1rem 0.1rem 0.1rem #e6e6e6;
+        border-radius: 50%;
+        padding: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        width: 35px;
+        backface-visibility: hidden;
+        transition: all .3s; }
+        .section-posts .pager .content .page-action:hover {
+          box-shadow: 0.1rem 0.1rem 0.5rem #e6e6e6; }
+        .section-posts .pager .content .page-action img {
+          height: 20px;
+          width: 20px; }
+  .section-posts .posts {
+    display: grid;
+    grid-template: 1fr/repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 1.3rem 0; }
+    .section-posts .posts .post {
+      border-radius: 6px;
+      border: 1px solid #f2f2f2;
+      box-shadow: 0 1rem 1.2rem #e6e6e6;
+      transition: all .3s; }
+      .section-posts .posts .post kbd {
+        color: black;
+        background-color: #f2f2f2;
+        padding: .2rem .4rem;
+        border-radius: 5px; }
+      .section-posts .posts .post:hover {
+        transform: translateY(-5px);
+        box-shadow: 1.2rem 2rem 2.2rem #d9d9d9;
+        cursor: pointer; }
+      .section-posts .posts .post .post-image {
+        height: 200px;
+        padding: 20px;
+        border-radius: 6px 6px 0 0; }
+        .section-posts .posts .post .post-image .post-author {
+          background-color: #fff;
+          width: 40px;
+          height: 40px; }
+          .section-posts .posts .post .post-image .post-author .image {
+            width: 35px;
+            height: 35px;
+            border: 3px solid white;
+            border-radius: 50%; }
+            .section-posts .posts .post .post-image .post-author .image img {
+              height: 100%;
+              width: 100%;
+              border-radius: 50%; }
+      .section-posts .posts .post #content {
+        display: flex;
+        flex-direction: column;
+        padding: 1.9rem 1rem;
+        height: 100px;
+        position: relative; }
+        .section-posts .posts .post #content > * {
+          margin: 3.5px 0; }
+        .section-posts .posts .post #content .post-category {
+          font-family: 'PTMono';
+          font-weight: 600;
+          font-size: .9rem;
+          color: #606060; }
+        .section-posts .posts .post #content .post-title {
+          font-family: 'Montserrat';
+          color: black;
+          font-weight: 700;
+          font-size: 1.1rem; }
+        .section-posts .posts .post #content .post-timestamp {
+          font-size: .65rem;
+          font-family: 'Montserrat';
+          margin-top: auto;
+          font-weight: 550;
+          position: absolute;
+          bottom: 10px; }
