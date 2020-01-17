@@ -49,7 +49,7 @@
     .posts {
 
         display: grid;
-        grid-template: 1fr / repeat(auto-fit, minmax(350px, 1fr));
+        grid-template: 1fr / repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
         margin: 1.3rem 0;
 
