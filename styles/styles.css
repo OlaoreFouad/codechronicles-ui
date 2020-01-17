@@ -190,3 +190,42 @@ h1, h2, h3, h4, h5, h6 {
           font-weight: 550;
           position: absolute;
           bottom: 10px; }
+
+footer {
+  height: 300px;
+  color: white;
+  background-color: #BA9E79; }
+  footer .content {
+    margin: 0 auto;
+    width: 60vw;
+    text-align: center;
+    font-family: 'raleway';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; }
+    footer .content .top {
+      margin: 20px 0;
+      font-size: 1.1rem;
+      font-weight: 700; }
+    footer .content .social {
+      display: flex;
+      justify-content: center; }
+      footer .content .social a {
+        text-decoration: none;
+        outline: none;
+        border: none;
+        font-size: 1.4rem;
+        margin: 0 15px; }
+        footer .content .social a:active, footer .content .social a:visited, footer .content .social a:focus {
+          outline: none; }
+        footer .content .social a:nth-child(1) {
+          color: lightblue; }
+        footer .content .social a:nth-child(2) {
+          color: black; }
+        footer .content .social a:nth-child(3) {
+          color: blue; }
+
+@media (max-width: 500px) {
+  footer .content {
+    width: 70vw; } }
