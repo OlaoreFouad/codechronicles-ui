@@ -1,0 +1,111 @@
+section#modal {
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba($color: $color-secondary, $alpha: .9);
+    z-index: 999;
+
+    .modal-content {
+
+        width: 85vw;
+        margin: 0 auto;
+        margin-top: 20px;
+
+        .articles {
+            margin-top: 40px;
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            #articles {
+
+                display: flex;
+
+                .article {
+                    width: 200px;
+
+
+                    img {
+                        width: 100%;
+                        border-radius: 4px;
+                        overflow: hidden;
+                        height: 100px;
+                    }
+
+                    span { display: block; color: black; }
+
+                    .title {
+                        color: black;
+                        font-family: 'PTMono';
+                        font-weight: 700;
+                        font-size: 1rem;
+                        padding: 10px 0;
+                    }
+
+                    .date {
+                        font-family: 'PTMono';
+                        margin-top: 30px;
+                        font-size: .7rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 20px 0;
+
+            .nav-item {
+                font-size: 1.2rem;
+                font-family: 'Raleway';
+                padding: 1.5px 0;
+
+                &.active {
+
+                    .nav-link {
+                        color: $color-primary-dark;
+                        font-weight: 700;
+                    }
+
+                }
+                
+                .nav-link {
+                    color: $color-black;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $color-primary-dark;
+                    }
+                }
+
+            }
+
+        }
+
+        .close-container {
+            display: flex;
+            justify-content: flex-end;
+    
+            .close {
+                padding: 0px 10px;
+                width: auto;
+                font-size: 2rem;
+                color: black;
+                border: 1px solid black;
+                text-align: center;
+                border-radius: 50%;
+            }
+    
+        }
+
+    }
+
+}

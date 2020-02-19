@@ -36,7 +36,6 @@
     padding: 0; }
 
 body {
-  overflow-x: hidden;
   font-size: 62.5%; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -254,3 +253,69 @@ footer {
 @media (max-width: 500px) {
   footer .content {
     width: 70vw; } }
+
+section#modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(255, 253, 208, 0.9);
+  z-index: 999; }
+  section#modal .modal-content {
+    width: 85vw;
+    margin: 0 auto;
+    margin-top: 20px; }
+    section#modal .modal-content .articles {
+      margin-top: 40px; }
+      section#modal .modal-content .articles h2 {
+        font-size: 1rem; }
+      section#modal .modal-content .articles #articles {
+        display: flex; }
+        section#modal .modal-content .articles #articles .article {
+          width: 200px; }
+          section#modal .modal-content .articles #articles .article img {
+            width: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+            height: 100px; }
+          section#modal .modal-content .articles #articles .article span {
+            display: block;
+            color: black; }
+          section#modal .modal-content .articles #articles .article .title {
+            color: black;
+            font-family: 'PTMono';
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 10px 0; }
+          section#modal .modal-content .articles #articles .article .date {
+            font-family: 'PTMono';
+            margin-top: 30px;
+            font-size: .7rem; }
+    section#modal .modal-content .nav-links {
+      list-style-type: none;
+      margin: 20px 0; }
+      section#modal .modal-content .nav-links .nav-item {
+        font-size: 1.2rem;
+        font-family: 'Raleway';
+        padding: 1.5px 0; }
+        section#modal .modal-content .nav-links .nav-item.active .nav-link {
+          color: #7E542E;
+          font-weight: 700; }
+        section#modal .modal-content .nav-links .nav-item .nav-link {
+          color: #000;
+          text-decoration: none; }
+          section#modal .modal-content .nav-links .nav-item .nav-link:hover {
+            color: #7E542E; }
+    section#modal .modal-content .close-container {
+      display: flex;
+      justify-content: flex-end; }
+      section#modal .modal-content .close-container .close {
+        padding: 0px 10px;
+        width: auto;
+        font-size: 2rem;
+        color: black;
+        border: 1px solid black;
+        text-align: center;
+        border-radius: 50%; }
