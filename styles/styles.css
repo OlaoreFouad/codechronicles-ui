@@ -272,9 +272,12 @@ section#modal {
       section#modal .modal-content .articles h2 {
         font-size: 1rem; }
       section#modal .modal-content .articles #articles {
-        display: flex; }
+        width: 100%;
+        padding: 20px 0px; }
         section#modal .modal-content .articles #articles .article {
-          width: 200px; }
+          margin: 0 10px; }
+          section#modal .modal-content .articles #articles .article:active, section#modal .modal-content .articles #articles .article:focus {
+            outline: none; }
           section#modal .modal-content .articles #articles .article img {
             width: 100%;
             border-radius: 4px;

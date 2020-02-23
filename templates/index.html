@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../styles/slick.css">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../font-awesome-4.0.3/css/font-awesome.min.css">
     <title>CodeChronicles</title>
@@ -181,7 +182,27 @@
                 <div id="articles">
                     <div class="article">
                         <img src="../images/post11.jpg" alt="image">
-                        <span class="title">Three things that give you energy</span>
+                        <span class="title">Three things that give you energy 1</span>
+                        <span class="date">10 months ago.</span>
+                    </div>
+                    <div class="article">
+                        <img src="../images/post11.jpg" alt="image">
+                        <span class="title">Three things that give you energy 2</span>
+                        <span class="date">10 months ago.</span>
+                    </div>
+                    <div class="article">
+                        <img src="../images/post11.jpg" alt="image">
+                        <span class="title">Three things that give you energy 3</span>
+                        <span class="date">10 months ago.</span>
+                    </div>
+                    <div class="article">
+                        <img src="../images/post11.jpg" alt="image">
+                        <span class="title">Three things that give you energy 4</span>
+                        <span class="date">10 months ago.</span>
+                    </div>
+                    <div class="article">
+                        <img src="../images/post11.jpg" alt="image">
+                        <span class="title">Three things that give you energy 5</span>
                         <span class="date">10 months ago.</span>
                     </div>
                 </div>
@@ -189,5 +210,16 @@
         </div>
         
     </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script>
+        $('#articles').slick({
+            slidesToShow: 2,
+            arrows: false,
+            infinite: false,
+            dots: false
+        })
+    </script>
 </body>
 </html>

@@ -24,11 +24,13 @@ section#modal {
 
             #articles {
 
-                display: flex;
+                width: 100%;
+                padding: 20px 0px;
 
                 .article {
-                    width: 200px;
 
+                    &:active, &:focus { outline: none; }
+                    margin: 0 10px;
 
                     img {
                         width: 100%;
