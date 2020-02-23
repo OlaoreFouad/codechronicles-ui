@@ -49,26 +49,31 @@ h1, h2, h3, h4, h5, h6 {
   @media (max-width: 600px) {
     .section-header header.header {
       display: none; } }
-  @media (min-width: 600px) {
-    .section-header header.header-sm {
-      display: none; } }
-  @media (max-width: 600px) {
-    .section-header header.header-sm {
-      display: block; } }
-  .section-header header.header-sm .container {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 90vw; }
-    .section-header header.header-sm .container .sm-logo {
-      height: 70px; }
-    .section-header header.header-sm .container .menu, .section-header header.header-sm .container img[alt="search"] {
-      margin: auto 0; }
-      .section-header header.header-sm .container .menu i, .section-header header.header-sm .container img[alt="search"] i {
-        font-size: 1.3rem;
-        color: black; }
-    .section-header header.header-sm .container img[alt="search"] {
-      height: 20px; }
+  .section-header header.header-sm {
+    width: 100%;
+    z-index: 900; }
+    @media (min-width: 600px) {
+      .section-header header.header-sm {
+        display: none; } }
+    @media (max-width: 600px) {
+      .section-header header.header-sm {
+        display: block; } }
+    .section-header header.header-sm .container {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 90vw; }
+      .section-header header.header-sm .container .menu:hover {
+        cursor: pointer; }
+      .section-header header.header-sm .container .sm-logo {
+        height: 70px; }
+      .section-header header.header-sm .container .menu, .section-header header.header-sm .container img[alt="search"] {
+        margin: auto 0; }
+        .section-header header.header-sm .container .menu i, .section-header header.header-sm .container img[alt="search"] i {
+          font-size: 1.3rem;
+          color: black; }
+      .section-header header.header-sm .container img[alt="search"] {
+        height: 20px; }
   .section-header header .logo {
     width: 100%;
     height: 120px; }
@@ -78,13 +83,14 @@ h1, h2, h3, h4, h5, h6 {
       .section-header header .logo .logo-container .logo-image {
         height: 100%; }
     .section-header header .logo .right-pane {
-      position: absolute;
+      position: fixed;
       background-color: #BA9E79;
       height: 50px;
       width: 50px;
       right: 2%;
       top: 0;
       display: flex;
+      z-index: 998;
       justify-content: center;
       align-items: center; }
       .section-header header .logo .right-pane .switch {
@@ -256,6 +262,7 @@ footer {
 
 section#modal {
   position: fixed;
+  animation: fadeIn 1s;
   left: 0;
   top: 0;
   width: 100vw;
@@ -263,10 +270,35 @@ section#modal {
   overflow: auto;
   background-color: rgba(255, 253, 208, 0.9);
   z-index: 999; }
+  section#modal .modal-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 30px; }
+    section#modal .modal-footer .copyright {
+      color: black;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: 'Raleway'; }
+    section#modal .modal-footer .switch {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: black;
+      margin-left: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      section#modal .modal-footer .switch .lever {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: white; }
   section#modal .modal-content {
     width: 85vw;
     margin: 0 auto;
-    margin-top: 20px; }
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; }
     section#modal .modal-content .articles {
       margin-top: 40px; }
       section#modal .modal-content .articles h2 {
@@ -283,6 +315,8 @@ section#modal {
             border-radius: 4px;
             overflow: hidden;
             height: 100px; }
+          section#modal .modal-content .articles #articles .article:hover {
+            cursor: pointer; }
           section#modal .modal-content .articles #articles .article span {
             display: block;
             color: black; }
@@ -322,3 +356,13 @@ section#modal {
         border: 1px solid black;
         text-align: center;
         border-radius: 50%; }
+        section#modal .modal-content .close-container .close:hover {
+          cursor: pointer; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: .1; }
+  50% {
+    opacity: .5; }
+  100% {
+    opacity: 1; } }

@@ -1,6 +1,7 @@
 section#modal {
 
     position: fixed;
+    animation: fadeIn 1s;
     left: 0;
     top: 0;
     width: 100vw;
@@ -9,11 +10,46 @@ section#modal {
     background-color: rgba($color: $color-secondary, $alpha: .9);
     z-index: 999;
 
+    .modal-footer {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+
+        .copyright {
+            color: black;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: 'Raleway';
+        }
+
+        .switch {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: black;
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .lever {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: white;
+            }
+
+        }
+
+    }
+
     .modal-content {
 
         width: 85vw;
         margin: 0 auto;
         margin-top: 20px;
+        display: flex;
+        flex-direction: column;
 
         .articles {
             margin-top: 40px;
@@ -37,6 +73,10 @@ section#modal {
                         border-radius: 4px;
                         overflow: hidden;
                         height: 100px;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
                     }
 
                     span { display: block; color: black; }
@@ -104,10 +144,28 @@ section#modal {
                 border: 1px solid black;
                 text-align: center;
                 border-radius: 50%;
+
+
+                &:hover {
+                    cursor: pointer;
+                }
+
             }
     
         }
 
     }
+
+}
+
+@keyframes fadeIn {
+
+    0% {
+        opacity: .1;
+    }
+
+    50% { opacity: .5; } 
+
+    100% { opacity: 1; }
 
 }
