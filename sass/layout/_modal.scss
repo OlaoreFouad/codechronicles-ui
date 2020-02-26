@@ -1,8 +1,9 @@
-@mixin search-input-on-sm-scrns {
+@mixin search-input-on-sm-scrns($marginTop) {
     input {
         text-indent: 10px;
-        font-size: .7rem;
+        font-size: .8rem;
     }
+    margin-top: $marginTop;
 }
 
 section.modal {
@@ -47,17 +48,17 @@ section.modal {
 
         @media(max-width: 800px) {
             width: 50vw;
-            @include search-input-on-sm-scrns();
+            @include search-input-on-sm-scrns(5%);
         }
 
         @media(max-width: 500px) {
             width: 60vw;
-            @include search-input-on-sm-scrns();
+            @include search-input-on-sm-scrns(10%);
         }
 
         @media(max-width: 400px) {
             width: 70vw;
-            @include search-input-on-sm-scrns();
+            @include search-input-on-sm-scrns(15%);
         }
 
         

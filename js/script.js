@@ -12,6 +12,10 @@ menu.addEventListener('click', _ => {
     modal.style.display = 'block';
 })
 
+document.querySelectorAll('.post').forEach(val => {
+    val.onclick = () => window.location.href = "post.html";
+})
+
 close.addEventListener('click', _ => modal.style.display = 'none');
 
 searchClose.addEventListener('click', _ => searchModal.style.display = 'none');

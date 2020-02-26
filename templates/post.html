@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Single Post - CodeChronicles</title>
+</head>
+<body>
+    
+    <section class="post-image">
+        <img src="../images/post10.jpg" alt="post image" class="image">
+    </section>
+
+    <section id="post-loading-modal" style="display: block;">
+        <div class="modal-content">
+            <div class="loader">
+                <div id="loader"></div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        (function() {
+            setTimeout(() => {
+                document.querySelector('#post-loading-modal').style.display = 'none';
+            }, 2000);
+        })();
+    </script>
+</body>
+</html>
