@@ -260,7 +260,8 @@ footer {
   footer .content {
     width: 70vw; } }
 
-section#modal {
+section.modal {
+  display: none;
   position: fixed;
   animation: fadeIn 1s;
   left: 0;
@@ -270,16 +271,73 @@ section#modal {
   overflow: auto;
   background-color: rgba(255, 253, 208, 0.9);
   z-index: 999; }
-  section#modal .modal-footer {
+  section.modal .search-form {
+    width: 45vw;
+    margin: 0 auto;
+    margin-top: 5%; }
+    section.modal .search-form input {
+      width: 100%;
+      color: black;
+      font-family: 'Raleway';
+      font-size: .9rem;
+      font-style: oblique;
+      text-indent: 25px;
+      padding: 13px 0;
+      outline: none;
+      border: none;
+      border: 1px solid #BA9E79;
+      background-color: transparent;
+      border-radius: 4px;
+      transition: all .5s; }
+      section.modal .search-form input:not(:placeholder-shown) {
+        color: black;
+        font-style: normal; }
+    @media (max-width: 800px) {
+      section.modal .search-form {
+        width: 50vw; }
+        section.modal .search-form input {
+          text-indent: 10px;
+          font-size: .7rem; } }
+    @media (max-width: 500px) {
+      section.modal .search-form {
+        width: 60vw; }
+        section.modal .search-form input {
+          text-indent: 10px;
+          font-size: .7rem; } }
+    @media (max-width: 400px) {
+      section.modal .search-form {
+        width: 70vw; }
+        section.modal .search-form input {
+          text-indent: 10px;
+          font-size: .7rem; } }
+    section.modal .search-form .button-container {
+      width: 100%;
+      display: flex;
+      margin: 10px 0; }
+      section.modal .search-form .button-container button {
+        margin-left: auto;
+        color: white;
+        font-size: .8rem;
+        padding: 7px 30px;
+        font-family: 'Raleway';
+        background-color: #c08652;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        transition: background-color .4s; }
+        section.modal .search-form .button-container button:hover {
+          background-color: #7E542E;
+          cursor: pointer; }
+  section.modal .modal-footer {
     display: flex;
     align-items: center;
     margin-top: 30px; }
-    section#modal .modal-footer .copyright {
+    section.modal .modal-footer .copyright {
       color: black;
       font-size: 1rem;
       font-weight: 700;
       font-family: 'Raleway'; }
-    section#modal .modal-footer .switch {
+    section.modal .modal-footer .switch {
       width: 30px;
       height: 30px;
       border-radius: 50%;
@@ -288,67 +346,67 @@ section#modal {
       display: flex;
       justify-content: center;
       align-items: center; }
-      section#modal .modal-footer .switch .lever {
+      section.modal .modal-footer .switch .lever {
         width: 12px;
         height: 12px;
         border-radius: 50%;
         background-color: white; }
-  section#modal .modal-content {
+  section.modal .modal-content {
     width: 85vw;
     margin: 0 auto;
     margin-top: 20px;
     display: flex;
     flex-direction: column; }
-    section#modal .modal-content .articles {
+    section.modal .modal-content .articles {
       margin-top: 40px; }
-      section#modal .modal-content .articles h2 {
+      section.modal .modal-content .articles h2 {
         font-size: 1rem; }
-      section#modal .modal-content .articles #articles {
+      section.modal .modal-content .articles #articles {
         width: 100%;
         padding: 20px 0px; }
-        section#modal .modal-content .articles #articles .article {
+        section.modal .modal-content .articles #articles .article {
           margin: 0 10px; }
-          section#modal .modal-content .articles #articles .article:active, section#modal .modal-content .articles #articles .article:focus {
+          section.modal .modal-content .articles #articles .article:active, section.modal .modal-content .articles #articles .article:focus {
             outline: none; }
-          section#modal .modal-content .articles #articles .article img {
+          section.modal .modal-content .articles #articles .article img {
             width: 100%;
             border-radius: 4px;
             overflow: hidden;
             height: 100px; }
-          section#modal .modal-content .articles #articles .article:hover {
+          section.modal .modal-content .articles #articles .article:hover {
             cursor: pointer; }
-          section#modal .modal-content .articles #articles .article span {
+          section.modal .modal-content .articles #articles .article span {
             display: block;
             color: black; }
-          section#modal .modal-content .articles #articles .article .title {
+          section.modal .modal-content .articles #articles .article .title {
             color: black;
             font-family: 'PTMono';
             font-weight: 700;
             font-size: 1rem;
             padding: 10px 0; }
-          section#modal .modal-content .articles #articles .article .date {
+          section.modal .modal-content .articles #articles .article .date {
             font-family: 'PTMono';
             margin-top: 30px;
             font-size: .7rem; }
-    section#modal .modal-content .nav-links {
+    section.modal .modal-content .nav-links {
       list-style-type: none;
       margin: 20px 0; }
-      section#modal .modal-content .nav-links .nav-item {
+      section.modal .modal-content .nav-links .nav-item {
         font-size: 1.2rem;
         font-family: 'Raleway';
         padding: 1.5px 0; }
-        section#modal .modal-content .nav-links .nav-item.active .nav-link {
+        section.modal .modal-content .nav-links .nav-item.active .nav-link {
           color: #7E542E;
           font-weight: 700; }
-        section#modal .modal-content .nav-links .nav-item .nav-link {
+        section.modal .modal-content .nav-links .nav-item .nav-link {
           color: #000;
           text-decoration: none; }
-          section#modal .modal-content .nav-links .nav-item .nav-link:hover {
+          section.modal .modal-content .nav-links .nav-item .nav-link:hover {
             color: #7E542E; }
-    section#modal .modal-content .close-container {
+    section.modal .modal-content .close-container {
       display: flex;
       justify-content: flex-end; }
-      section#modal .modal-content .close-container .close {
+      section.modal .modal-content .close-container .close {
         padding: 0px 10px;
         width: auto;
         font-size: 2rem;
@@ -356,7 +414,7 @@ section#modal {
         border: 1px solid black;
         text-align: center;
         border-radius: 50%; }
-        section#modal .modal-content .close-container .close:hover {
+        section.modal .modal-content .close-container .close:hover {
           cursor: pointer; }
 
 @keyframes fadeIn {

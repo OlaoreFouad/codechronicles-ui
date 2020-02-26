@@ -1,19 +1,26 @@
 const menu = document.querySelector('.menu');
-const close = document.querySelector('.close');
+const openSearch = document.querySelector('#search');
+const openSearchBig = document.querySelector('#search-icon');
+const close = document.querySelector('#menu-close');
 
 const modal = document.querySelector('#modal');
+const searchModal = document.querySelector('#search-modal');
 
-menu.addEventListener('click', (e) => {
+const searchClose = document.querySelector('#search-close');
+
+menu.addEventListener('click', _ => {
     modal.style.display = 'block';
 })
 
-close.addEventListener('click', (e) => {
-    modal.style.display = 'none';
-})
+close.addEventListener('click', _ => modal.style.display = 'none');
 
-var last = 0;
-var next;
+searchClose.addEventListener('click', _ => searchModal.style.display = 'none');
+openSearch.addEventListener('click', _ => searchModal.style.display = 'block');
+openSearchBig.addEventListener('click', _ => searchModal.style.display = 'block');
 
-window.onscroll = () => {
-    last = window.pageYOffset;
-}
+// var last = 0;
+// var next;
+
+// window.onscroll = () => {
+//     last = window.pageYOffset;
+// }

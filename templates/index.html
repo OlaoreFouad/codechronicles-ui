@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="menu"><i class="fa fa-bars"></i></div>
                 <img src="../images/CODE-CHRONICLES-NAME.png" alt="logo" class="sm-logo">
-                <img src="../images/magnifying-glass.png" alt="search">
+                <img src="../images/magnifying-glass.png" alt="search" id="search-icon">
             </div>
         </header>
         <header class="header">
@@ -35,7 +35,7 @@
                     <li class="nav-item"> <a href="#" class="nav-link">Podcasts</a></li>
                     <li class="nav-item"> <a href="#" class="nav-link">Authors</a></li>
                     <li class="nav-item"> <a href="#" class="nav-link">Contact</a></li>
-                    <li class="nav-item"> <a href="#" class="nav-link"><img src="../images/magnifying-glass.png" alt="search icon" class="search"></a></li>
+                    <li class="nav-item"> <a href="#" class="nav-link" id="search"><img src="../images/magnifying-glass.png" alt="search icon" class="search"></a></li>
                 </ul>
             </nav>
         </header>
@@ -165,10 +165,23 @@
     </footer>
 
     <!-- Modals -->
-    <section id="modal">
+
+    <section class="modal" id="search-modal">
+        <div class="modal-content">
+            <div class="close-container"><span class="close" id="search-close">&times;</span></div>
+            <form class="search-form">
+                <input type="text" placeholder="Search by post name, category or concept...">
+                <div class="button-container">
+                    <button>Search</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="modal" class="modal">
         <div class="modal-content">
             <div class="close-container">
-                <span class="close">&times;</span>
+                <span class="close" id="menu-close">&times;</span>
             </div>
             <ul class="nav-links">
                 <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
