@@ -439,6 +439,28 @@ section.post .post-image {
 section.post .post-grid {
   display: grid;
   grid-template-columns: 15% 70% 15%; }
+  section.post .post-grid .right-column {
+    position: relative; }
+    section.post .post-grid .right-column .content {
+      display: flex;
+      position: sticky;
+      flex-direction: column; }
+      section.post .post-grid .right-column .content .link {
+        width: 50px;
+        background-color: #fff;
+        box-shadow: .2rem .2rem .4rem #ccc;
+        padding: 20px 7.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin: 5px 0; }
+        section.post .post-grid .right-column .content .link.post-track {
+          border: 1.5px solid lightcoral; }
+        section.post .post-grid .right-column .content .link img {
+          height: 20px; }
+        section.post .post-grid .right-column .content .link i {
+          font-size: 1.2rem; }
   section.post .post-grid .post-content article {
     margin: 30px 0; }
     section.post .post-grid .post-content article p {
