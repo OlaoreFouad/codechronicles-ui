@@ -439,28 +439,30 @@ section.post .post-image {
 section.post .post-grid {
   display: grid;
   grid-template-columns: 15% 70% 15%; }
-  section.post .post-grid .right-column {
-    position: relative; }
-    section.post .post-grid .right-column .content {
+  section.post .post-grid .right-column .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; }
+    section.post .post-grid .right-column .content .link {
+      width: 50px;
+      background-color: #fff;
+      box-shadow: .2rem .2rem .4rem #ccc;
+      padding: 15px 1.75px;
       display: flex;
-      position: sticky;
-      flex-direction: column; }
-      section.post .post-grid .right-column .content .link {
-        width: 50px;
-        background-color: #fff;
-        box-shadow: .2rem .2rem .4rem #ccc;
-        padding: 20px 7.5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        margin: 5px 0; }
-        section.post .post-grid .right-column .content .link.post-track {
-          border: 1.5px solid lightcoral; }
-        section.post .post-grid .right-column .content .link img {
-          height: 20px; }
-        section.post .post-grid .right-column .content .link i {
-          font-size: 1.2rem; }
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin: 5px 0; }
+      section.post .post-grid .right-column .content .link.post-track {
+        border: 1.5px solid #7E542E; }
+      section.post .post-grid .right-column .content .link:hover {
+        cursor: pointer; }
+      section.post .post-grid .right-column .content .link img {
+        height: 20px; }
+      section.post .post-grid .right-column .content .link i {
+        font-size: 1.2rem; }
   section.post .post-grid .post-content article {
     margin: 30px 0; }
     section.post .post-grid .post-content article p {
@@ -483,6 +485,80 @@ section.post .post-grid {
       color: #4d4d4d;
       font-size: .7rem;
       font-weight: 700; }
+
+section.newsletter {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3.5rem 15%;
+  background-color: #c3aa8a;
+  margin: 20px 0; }
+  section.newsletter .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    section.newsletter .info h2 {
+      color: black;
+      font-family: 'MontserratBold', sans-serif;
+      font-size: 1.1rem; }
+    section.newsletter .info span {
+      font-family: 'Raleway';
+      font-size: .9rem;
+      color: black;
+      font-weight: 700;
+      padding: 20px 0; }
+  section.newsletter .call-to-action {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    justify-content: center; }
+    section.newsletter .call-to-action input {
+      outline: none;
+      border: none;
+      border: 1px solid black;
+      padding: 10px;
+      font-family: 'MontserratBold';
+      border-radius: 4px; }
+    section.newsletter .call-to-action button {
+      color: white;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #98784e;
+      font-family: 'Raleway';
+      font-weight: 700;
+      outline: none;
+      border: none;
+      border-radius: 4px; }
+      section.newsletter .call-to-action button:hover {
+        cursor: pointer; }
+
+section.author-metadata {
+  padding: 2rem 10%;
+  display: grid;
+  grid-template-columns: 30% 70%; }
+  section.author-metadata .image {
+    text-align: center; }
+    section.author-metadata .image img {
+      height: 150px;
+      border-radius: 50%;
+      width: 150px; }
+  section.author-metadata .info {
+    display: flex;
+    flex-direction: column; }
+    section.author-metadata .info > * {
+      margin: 10px 0; }
+    section.author-metadata .info .name {
+      color: black;
+      font-family: 'Raleway';
+      font-weight: 700;
+      font-size: 1.3rem; }
+    section.author-metadata .info .bio {
+      color: black;
+      font-family: 'Raleway';
+      font-size: 1rem; }
+    section.author-metadata .info .links a {
+      font-size: .9rem;
+      color: black;
+      margin: 0 10px; }
 
 section#post-loading-modal {
   position: fixed;
