@@ -470,8 +470,9 @@ section.post .post-grid {
       color: gray;
       font-size: 1.1rem;
       font-weight: 500;
-      line-height: 1.5;
-      margin: 20px 0; }
+      line-height: 1.7;
+      margin: 20px 0;
+      text-indent: 20px; }
   section.post .post-grid .post-content .post-metadata {
     text-align: center;
     padding: 20px 0; }
@@ -492,20 +493,17 @@ section.newsletter {
   padding: 3.5rem 15%;
   background-color: #c3aa8a;
   margin: 20px 0; }
-  section.newsletter .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
-    section.newsletter .info h2 {
-      color: black;
-      font-family: 'MontserratBold', sans-serif;
-      font-size: 1.1rem; }
-    section.newsletter .info span {
-      font-family: 'Raleway';
-      font-size: .9rem;
-      color: black;
-      font-weight: 700;
-      padding: 20px 0; }
+  section.newsletter .info h2 {
+    color: black;
+    font-family: 'MontserratBold', sans-serif;
+    font-size: 1.1rem;
+    padding: 10px 0; }
+  section.newsletter .info span {
+    font-family: 'Raleway';
+    font-size: .9rem;
+    color: black;
+    font-weight: 700;
+    padding: 20px 0; }
   section.newsletter .call-to-action {
     display: flex;
     flex-direction: column;
@@ -534,31 +532,68 @@ section.newsletter {
 section.author-metadata {
   padding: 2rem 10%;
   display: grid;
-  grid-template-columns: 30% 70%; }
+  grid-template-columns: 200px auto;
+  margin: 10px 0;
+  border-bottom: 1px solid #f2f2f2; }
   section.author-metadata .image {
     text-align: center; }
     section.author-metadata .image img {
       height: 150px;
       border-radius: 50%;
       width: 150px; }
-  section.author-metadata .info {
+  section.author-metadata .info > * {
+    margin: 10px 0;
+    display: block;
+    width: 100%; }
+  section.author-metadata .info .name {
+    color: black;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 1.3rem; }
+  section.author-metadata .info .bio {
+    color: black;
+    font-family: 'Raleway';
+    font-size: 1rem; }
+  section.author-metadata .info .links a {
+    font-size: 1.2rem;
+    color: #a6a6a6;
+    margin: 0 10px; }
+
+section.recommended {
+  padding: 3rem 0; }
+  section.recommended .header section.image {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: .1rem .1rem .2rem #ccc;
     display: flex;
-    flex-direction: column; }
-    section.author-metadata .info > * {
-      margin: 10px 0; }
-    section.author-metadata .info .name {
-      color: black;
-      font-family: 'Raleway';
+    padding: 30px;
+    margin: 0 auto; }
+    section.recommended .header section.image img {
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center; }
+  section.recommended h1 {
+    font-family: 'MontserratBold', sans-serif;
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 20px 0; }
+  section.recommended .no-posts {
+    text-align: center;
+    padding: 20px 0; }
+    section.recommended .no-posts h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
       font-weight: 700;
-      font-size: 1.3rem; }
-    section.author-metadata .info .bio {
-      color: black;
-      font-family: 'Raleway';
-      font-size: 1rem; }
-    section.author-metadata .info .links a {
-      font-size: .9rem;
-      color: black;
-      margin: 0 10px; }
+      font-family: 'Raleway'; }
+    section.recommended .no-posts span {
+      font-weight: 700;
+      padding: 5px 0;
+      font-size: 1rem;
+      font-family: 'Raleway'; }
 
 section#post-loading-modal {
   position: fixed;

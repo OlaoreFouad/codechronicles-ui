@@ -71,8 +71,9 @@ section.post {
                     color: gray;
                     font-size: 1.1rem;
                     font-weight: 500;
-                    line-height: 1.5;
+                    line-height: 1.7;
                     margin: 20px 0;
+                    text-indent: 20px;
                 }
 
             }
@@ -115,14 +116,11 @@ section.newsletter {
 
     .info {
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
         h2 {
             color: black;
             font-family: 'MontserratBold', sans-serif;
             font-size: 1.1rem;
+            padding: 10px 0;
         }
 
         span {
@@ -177,7 +175,9 @@ section.author-metadata {
 
     padding: 2rem 10%;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 200px auto;
+    margin: 10px 0;
+    border-bottom: 1px solid lighten($color: #ccc, $amount: 15%);
 
     .image {
 
@@ -193,11 +193,10 @@ section.author-metadata {
 
     .info {
 
-        display: flex;
-        flex-direction: column;
-
         & > * {
             margin: 10px 0;
+            display: block;
+            width: 100%;
         }
 
         .name {
@@ -215,10 +214,67 @@ section.author-metadata {
 
         .links {
             a {
-                font-size: .9rem;
-                color: black;
+                font-size: 1.2rem;
+                color: darken($color: #ccc, $amount: 15%);
                 margin: 0 10px;
             }
+        }
+
+    }
+
+}
+
+section.recommended {
+
+    padding: 3rem 0;
+
+    .header {
+
+        section.image {
+
+            height: 50px;
+            width: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: .1rem .1rem .2rem #ccc;
+            display: flex;
+            padding: 30px;
+            margin: 0 auto;
+
+            img {
+                height: 100%;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+    h1 {
+        font-family: 'MontserratBold', sans-serif;
+        text-align: center;
+        font-size: 1.7rem;
+        margin: 20px 0;
+    }
+
+    .no-posts {
+        text-align: center;
+        padding: 20px 0;
+
+        h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: 'Raleway';
+        }
+
+        span {
+            font-weight: 700;
+            padding: 5px 0;
+            font-size: 1rem;
+            font-family: 'Raleway';
         }
 
     }
